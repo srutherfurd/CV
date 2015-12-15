@@ -2,7 +2,7 @@ require 'dashing'
 
 configure do
   set :auth_token, ''
-  set :default_dashboard, 'myob_dash'
+  set :default_dashboard, 'LARPs'
 
   helpers do
     def protected!
