@@ -1,0 +1,80 @@
+<script type='text/javascript'>
+$(function() {
+  // These settings override the defaults set in application.coffee. You can do this on a per dashboard basis.
+  // Dashing.gridsterLayout('[{"col":2,"row":1},{"col":1,"row":1},{"col":3,"row":1},{"col":2,"row":2},{"col":3,"row":2},{"col":1,"row":2},{"col":5,"row":1},{"col":4,"row":2},{"col":2,"row":3}]')
+  Dashing.widget_base_dimensions = [370, 340]
+  Dashing.numColumns = 5
+});
+</script>
+
+<% content_for :title do %>1080p dashboard<% end %>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5&appId=502337339937592";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+  <script type="text/javascript" src="https://assets.yammer.com/assets/platform_embed.js"></script>
+  <script type="text/javascript"> 
+  yam.connect.embedFeed({
+    "network": "MYOB.com",
+    "config": {
+      "use_sso": false,
+      "header": true,
+      "footer": false,
+      "showOpenGraphPreview": false,
+      "defaultToCanonical": false,
+      "hideNetworkName": false
+    },
+    "container": "#embedded-feed"
+  });
+  </script>
+
+<div class="gridster">
+  <ul>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1" style='background-color:#fff;'>
+      <div style='background-color:#fff;' data-view="Image" data-image="/logo.png"></div>
+    </li>
+
+
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-view="Clock"></div>
+      <i class="icon-time icon-background"></i>
+    </li>
+
+    <li data-row="1" data-col="3" data-sizex="2" data-sizey="1">
+      <div data-id="twitter_mentions" data-view="Comments" style="font-size:30px" style="background-color:#ff9618;" data-moreinfo="Tweets from MYOB"></div>
+      <i class="icon-twitter icon-background"></i>
+    </li>
+
+
+    <li data-row="2" data-col="1" data-sizex="2" data-sizey="1">
+      <div data-id="job_list_NZ" data-view="List" data-unordered="true" data-title="Available Jobs (NZ)" style="font-size:90%" data-moreinfo="For more info - http://fsr.cvmail.com.au/myob/"></div>
+    </li>
+    <li data-row="3" data-col="1" data-sizex="2" data-sizey="1">
+      <div data-id="job_list_AU" data-view="List" data-unordered="true" style="font-size:90%" data-title="Available Jobs (AU)" data-moreinfo=""></div>
+    </li>
+
+    
+
+  </ul>
+
+  <span data-id="youtube" data-view="Youtube" data-title="youtube" style="padding: 0px"></span>
+
+</div>
+
+  <div class="fb-page" data-href="https://www.facebook.com/MYOB/" style ="position:relative; top: -1050px; left: 1525px;" data-width="330" data-height="1080" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true">
+  <div class="fb-xfbml-parse-ignore">
+  <blockquote cite="https://www.facebook.com/MYOB/"><a href="https://www.facebook.com/MYOB/">MYOB</a></blockquote></div></div>
+
+
+  <iframe id="ytplayer" type="text/html" width="720" height="680" style ="position:relative; top: -1100px; left: 450px;"
+  src="https://www.youtube.com/embed/?listType=playlist&list=PLyNexh_9F_-MZRzeWWl-er3ris6_Z3MFE&autoplay=1&loop=1"
+  frameborder="0" allowfullscreen>
+ 
+  <div id="embedded-feed"></div>
+  
