@@ -2,7 +2,7 @@ require 'dashing'
 
 configure do
   set :auth_token, ''
-  set :default_dashboard, 'LARPs'
+  set :default_dashboard, 'CV'
 
   helpers do
     def protected!
