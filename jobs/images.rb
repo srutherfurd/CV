@@ -7,8 +7,7 @@ imageList = ['/Worgen.jpeg', '/Draenei.jpeg', '/Forsaken.jpeg', '/Night Elven Ma
 
 SCHEDULER.every '10s', :first_in => 0 do |job|
 	begin
-		randomiser.rand(imageList.length)
-		File.open(path, 'rb') {|file| file.read}
+		images = imageList[randomiser.rand(imageList.length)]
 		send_event('image_display', comments: images)
 		end
 	end
